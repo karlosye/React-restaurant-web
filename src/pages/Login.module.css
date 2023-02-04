@@ -1,4 +1,18 @@
 .reservation-wrapper {
-    height:500px;
-    text-align: center;
+    height:25rem;
+}
+
+.form-wrapper {
+    margin: 3rem auto;
+    position: relative;
+    border: solid;
+    border-radius: 0.5rem;
+    width:50%;
+    height: 9rem;
+}
+
+.page {
+    position: absolute;
+    top:0.5rem;
+    right: 0.5rem;
 }

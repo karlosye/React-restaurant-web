@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // prop-step is a list of React element
-export default useCustomMultiStepsdForm = (steps) => {
+const useCustomMultiStepsForm = (steps) => {
   // set up the currStepIndex state:
   const [currStepIndex, setCurrStepIndex] = useState(0);
 
@@ -32,8 +32,11 @@ export default useCustomMultiStepsdForm = (steps) => {
   return {
     currStepIndex: currStepIndex,
     step: steps[currStepIndex],
+    steps:steps,
     goNextStep: goNextStep,
     goPrevStep: goPrevStep,
     goToStep: goToStep,
   };
 };
+
+export {useCustomMultiStepsForm};
