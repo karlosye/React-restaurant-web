@@ -2,7 +2,7 @@ import { useCustomMultiStepsForm } from "../hooks/useCustomForm";
 import classes from "./Login.module.css";
 
 const Login = () => {
-  const { currStepIndex, steps, step } = useCustomMultiStepsForm([
+  const { currStepIndex, steps, step, goNextStep, goPrevStep, isFirstStep, isLastStep } = useCustomMultiStepsForm([
     <div>one</div>,
     <div>two</div>,
   ]);
@@ -15,10 +15,10 @@ const Login = () => {
             <div className={classes["page"]}>
               {currStepIndex + 1}/{steps.length}
             </div>
-            {step}
-            <div>
-              <button>Back</button>
-              <button>Next</button>
+            <div className={classes["input-fields"]}>{step}</div>
+            <div className={classes["back-next-button"]}>
+              {!isFirstStep && <button type="button" onClick={goPrevStep}>Back</button>}
+              <button type="button" onClick={goNextStep}>{!isLastStep? "Next":"Submit"}</button>
             </div>
           </form>
         </div>

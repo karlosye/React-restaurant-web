@@ -36,6 +36,8 @@ const useCustomMultiStepsForm = (steps) => {
     goNextStep: goNextStep,
     goPrevStep: goPrevStep,
     goToStep: goToStep,
+    isFirstStep: currStepIndex === 0,
+    isLastStep: currStepIndex === steps.length - 1
   };
 };
 

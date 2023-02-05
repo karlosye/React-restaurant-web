@@ -16,3 +16,16 @@
     top:0.5rem;
     right: 0.5rem;
 }
+
+.input-fields {
+    margin-left: 4rem;
+    margin-top: 1rem;
+}
+
+.back-next-button {
+    margin-top: 5rem;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: end;
+    gap:0.5rem
+}
